@@ -1,6 +1,6 @@
-# Matrix inversion is a computationally costly operation.
-# There may be some benefit to caching the inverse of a matrix rather 
-# than compute it repeatedly spcially when the matrix is immutable or slow
+# Matrix inversion is a computationally expensive  operation.
+# There may be some benefit to cache the inverse of a matrix rather 
+# than compute it repeatedly specially when the matrix is immutable or slow
 #changing in nature. 
 #The following two functions are used to cache/retrieve the inverse of a matrix.
 
@@ -74,12 +74,14 @@ cacheSolve <- function(x, ...)
 
 
 # Test  run example
+
 #> x = rbind(c(1, 2), c(3, 4))
 #> m = makeCacheMatrix(x)
 #> cacheSolve(m)
 #[,1] [,2]
 #[1,] -2.0  1.0
 #[2,]  1.5 -0.5
+
 #> cacheSolve(m)
 #getting cached data x
 #[,1] [,2]
